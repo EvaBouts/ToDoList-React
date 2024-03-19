@@ -1,10 +1,8 @@
 const Form = () => {
     return (
-        <>
-            <div>
-                <h1>Formulaire</h1>
-            </div>
-        </>
+        <form>
+            <input type="text" placeholder="Ajouter une tâche" />
+        </form>
     )
 }
 

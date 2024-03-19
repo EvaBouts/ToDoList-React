@@ -1,15 +1,17 @@
 import Task from "./Task";
-import tasks from "../data/tasks.js";
 
-const Tasks = () => {
+const Tasks = ({ taskList, changeStatus }) => {
+
     return (
         <>
             <h1>Liste des Tasks</h1>
             {
-                tasks.map((task) => {
-                    return < Task id={task.id}
+                taskList.map((task) => {
+                    return < Task key={task.id}
+                        id={task.id}
                         done={task.done}
-                        label={task.label} />
+                        label={task.label}
+                        changeStatus={changeStatus} />
                 })
             }
         </>
